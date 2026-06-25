@@ -1,0 +1,63 @@
+<html class="full-height">
+<head>
+    <title>Animal Jam Done Right</title>
+    <link rel="stylesheet" type="text/css" href="css/game.css">
+    <meta http-equiv="Content-Security-Policy" content=" script-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob:; style-src 'self' 'unsafe-inline';">
+
+</head>
+<body id="site-content" style="background: url(./images/GamePage/Background.jpg) top center no-repeat;">
+
+    <div id="main-container">
+        <div id="global-navigation-bar">
+            <h1 id="logo">
+                
+            </h1>
+            <ul id="navigation">
+            <li><a onclick="goToHome(false)">Home</a></li>
+            <li><a onclick="goToHome(true)" class="logout">Log Out</a></li>
+            </ul>
+            <p id="user-display">Hi Michael</p>
+      </div>
+      <div id="game-embed-border">
+      	<div id="embed">
+            <!-- <embed id="flash-content" type="application/x-shockwave-flash" wmode="window" style="width: 100%; height: 100%;"/> -->
+        </div>
+        <div id="logo"></div>
+        <div class="nat-geo-kids-logo"></div>
+        <div class="theater-mode-toggle" id="theater-btn"></div>
+        <div id="packet-log-btn"></div>
+        <a href="" onclick="openWindow('', screen.width, screen.height, 1, 1);" id="btn-feedback-link"></a>
+				
+      </div>
+    </div>
+    <div id="footer">
+        <div id="copyright">
+            <p class="copyright-top"><a onclick='loadPage("http:\/\/www.nationalgeographic.com/")'><img alt="National Geographic" src="images/NatGeo.png" title="National Geographic"></a>&nbsp;&nbsp;
+                <span class="ie7pushdown">© 2010 </span>
+                <a onclick='loadPage("http:\/\/kids.nationalgeographic.com/kids/games/")'>National Geographic Games</a>
+                <span class="ie7pushdown">and </span>
+                <a onclick='loadPage("http:\/\/www.smartbombinteractive.com/")'>Smart Bomb Interactive, Inc.</a>  
+                <span class="ie7pushdown">All rights reserved.</span>
+            </p>
+        
+            <p class="copyright-text">"National Geographic," the Yellow Border Design, and "National Geographic Kids with the elasticized Yellow Border Design"<br> are registered trademarks of National Geographic, used with permission.</p>
+        </div>
+        <ul id="sitemap">
+
+            <li><a onclick='shell.openExternal("http:\/\/animaljam.com/game/play")'>Play Now</a></li>
+            <li><a onclick='shell.openExternal("http:\/\/animaljam.com/create_account")'>Create An Account</a></li>
+            <li><a onclick='shell.openExternal("http:\/\/animaljam.com/about_us")'>About Us</a></li>
+            <li><a onclick='shell.openExternal("http:\/\/animaljam.com/terms_and_conditions")'>Terms &amp; Conditions</a></li>
+            <li><a onclick='shell.openExternal("http:\/\/animaljam.com/privacy")'>Privacy Policy</a></li>
+            <li><a onclick='shell.openExternal("http:\/\/animaljam.com/rules")'>Rules</a></li>
+            <li><a onclick='shell.openExternal("http:\/\/animaljam.com/parents")'>Parents</a></li>
+            <li><a onclick='shell.openExternal("http:\/\/animaljam.com/contact")'>Contact</a></li>
+            <li><a onclick='shell.openExternal("http:\/\/animaljam.com/blog")'>Blog</a></li>
+            <li><a onclick='shell.openExternal("http:\/\/animaljam.com/help")'>Help</a></li>
+
+        </ul>
+    </div>
+    <script src="js/game.js"></script>
+    <script src="packet logger/logger.js"></script>
+</body>
+</html>

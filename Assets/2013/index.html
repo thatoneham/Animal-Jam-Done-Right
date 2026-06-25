@@ -1,0 +1,200 @@
+<html class="full-height">
+<head>
+    <title>Animal Jam Done Right</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body id="site-content" class="full-height">
+
+    <div id="blackout" style="display: none;"></div>
+
+    <div id="frame-top"></div>
+    <div id="frame">
+        <div id="frame-left" style="height: 1119px;"></div>
+        <div id="frame-right" style="height: 1119px;"></div>
+    </div>
+    <div id="main-container">
+        <div id="header-new">
+            <h1 class="aj-logo">
+                <a><img src="images/Logo.png"/></a>
+            </h1>
+            <img alt="Nat_geo_kids_logo_new" id="nat-geo-kids-new" src="images/NatKid.png">
+            <div id="user-status">&nbsp;</div>
+            <div id="user-bar">
+                <div class="left"></div>
+                <div class="body" id="sessionText"></div>
+                <div class="right"></div>
+            </div>
+            <div id="global-navigation-bar-new">
+                <ul id="global-navigation-new">
+                <li><a onclick='makeErrorMessage("your already there goofy")' id="nav-link-home"></a></li>
+                <li><a onclick='shell.openExternal("https:\/\/www.animaljam.com/en/join")' id="nav-link-membership"></a></li>
+                <li><a onclick='loadPage("http:\/\/www.animaljam.com/parents")' id="nav-link-parents"></a></li>
+                <li><a onclick='loadPage("http:\/\/www.animaljam.com/help")' id="nav-link-help"></a></li>
+                <li><a onclick='makeErrorMessage("Your already on the game")' id="nav-link-play"></a></li>
+                </ul>
+            </div>
+            
+            <div id="signin-container">
+                <div id="returning-players-row">
+                    <img alt="Return_player_header" class="header" src="images/SignIn/return_player_header.png"/>
+                    <div id="form-container">
+                    <form action="login" method="post">
+                    <div class="field-group">
+                        <label><img alt="Username_label2" class="label" src="images/SignIn/username_text.png"/></label>
+                        <div class="input-login-text-medium"><input autocomplete="off" id="signin_user_screen_name" name="signin_user[screen_name]" size="25" type="text" value=""/></div>
+                        <div class="clear"></div>
+                    </div><!--.fgroup-->
+                    
+                    <div class="field-group">
+                        <label><img alt="Password_label2" class="label" src="images/SignIn/password_text.png"/></label>
+                        <div class="input-login-text-medium"><input autocomplete="off" id="signin_user_password" name="signin_user[password]" size="25" type="password" value=""/></div>
+                        
+                        <div class="clear"></div>
+                    </div><!--.fgroup-->
+                    
+                    <div class="field-group">
+                        <label><img alt="Code_label" class="label" src="images/SignIn/code_text.png"/></label>
+                        <div class="input-login-text-small"><input autocomplete="off" id="signin_user_promo_code" name="signin_user[promo_code]" size="25" type="text"/></div>
+                        <a href="#" id="whats-this" onclick="toggleSignInCodeWhatsThis(); return false;">What's This?</a>
+                        <div id="whats-this-popup" style="display:none;">  
+                        <a href="#" id="close-btn" onclick="toggleSignInCodeWhatsThis(); return false;"></a>
+                        <p></p>
+                        <p></p>
+                        <p id="zeevex-instruct"> <a href="" target="blank">Click Here</a></p>
+                        <div class="clear"><!-- --></div>
+                        </div>
+                        <div class="blackout" style="display:none;"><!-- --></div>
+                        <div class="clear"></div>
+                    </div><!--.fgroup-->
+                    <div id="optional-text"></div>
+                    
+                    
+                    <div id="options">
+                        
+                        <div id="checkbox" >
+                            <input id="signin_user_remember_me" name="signin_user[remember_me]" type="checkbox" value="0"/><p>keep me logged in</p>
+                        </div>
+                        <br/>
+                        <a href="#" id="forgot-password" onclick="$('forgot-pass-container').toggle();; return false;">Forgot your password?</a>
+                        
+                        <input type="submit" value="" id="submit-play" class="play-now-btn"/>
+                        
+                    </div><!--options-->
+                    </form>
+                    </div><!--form-container-->
+                </div><!--returning-players-->  
+                
+                <div id="new-players-row">
+                    
+                    <img alt="New_player_header" class="header" src="images/SignIn/new_player_title.png"/>
+                    <p>New to Animal Jam?  Simply click here to create your animal and start playing!</p>
+                    <a href="" id="create-animal"></a>
+                    
+
+                    <div id="manage-child">Parents, you can manage your child’s account on our <span><a onclick='loadPage("http:\/\/www.animaljam.com/parent_dash")'>Parent Dashboard</a></span></div>
+
+
+                    <img alt="Pet_img" id="pet-img" src="images/SignIn/koala.png"/>
+                    
+                </div><!--new-players-->
+                <div class="clear"><!-- --></div>
+            </div>
+            <div id="error-content">
+                <div id="error-title">
+                    oops! an error has occured
+                </div>
+                <div id="error-text">
+                    i love monkeys
+                </div>
+            </div>
+        <div class="darken" id="otp-darken"></div>
+        <div id="otp-menu">
+        
+            <div id="otp-title">
+                Input your 2FA code that was sent to your email.
+            </div>
+            <input id="otp-input" type="text" value=""/>
+            <button id="otp-button" type="submit"></button>
+        </div>
+        <!-- <div id="middle" tabindex="-1"> for no flash support
+            <img class="animal" src="images/Animals/Bunny.png"/>
+            <img class="animal" src="images/Animals/Panda.png"/>
+            <img class="animal" src="images/Animals/Koala.png"/>
+            <img class="animal" src="images/Animals/Lion.png"/>
+
+            <div id="login-content">
+                <img id="login-pole" src="images/LoginPole.png"/> 
+                <div id="login-background" onclick='window.location.href="game.html";'>
+                    <div id="play-text">
+                        <div class="play-original"></div>
+                        <div class="play-hover"></div>
+                    </div>
+                    <div id="now-text">
+                        <div class="now-original"></div>
+                        <div class="now-hover"></div>
+                    </div>
+                    <div id="login-clip">
+                        <div id="glow-line"></div>
+                    </div>
+                    <img id="login-free-text" src="images/PlayNow/FreeText.svg"/>
+                    <div id="froggie"></div> 
+                </div>
+            </div>
+
+            <img class="animal" src="images/Animals/Monkey.png"/>
+            <img class="animal" src="images/Animals/Wolf.png"/>
+        </div> -->
+    </div>
+    
+    </div>
+    <div id="frame-foot">
+        <div id="frame-foot-content">
+            <div id="features-links">
+                <div class="link no-margin" id="feature-parents">
+                    <div class="icon"><a onclick='loadPage("http:\/\/www.animaljam.com/parents")'><img alt="Icon_security" src="images/Security.jpg"></a></div>
+                    <div class="details">
+                    <a onclick='loadPage("http:\/\/www.animaljam.com/parents")' class="link-title"></a>
+                    <p><a onclick='loadPage("http:\/\/www.animaljam.com/parents")'>Learn why Animal Jam is both safe and fun!</a></p>
+                    </div><!--.details-->
+                    <div class="clear"></div>
+                </div><!--.link-->
+                <div class="link" id="feature-membership">
+                    <div class="icon"><a onclick='shell.openExternal("http:\/\/www.animaljam.com/membership")'><img alt="Icon_paw" src="images/Paw.jpg"></a></div>
+                    <div class="details">
+                    <a onclick='shell.openExternal("http:\/\/www.animaljam.com/membership")' class="link-title"></a>
+                    <p><a onclick='shell.openExternal("http:\/\/www.animaljam.com/membership")'>See what you get, when you join the club.</a></p>
+                    </div><!--.details-->
+                    <div class="clear"></div>
+                </div><!--.link-->
+                <div class="link" id="feature-game-card">
+                    <div class="icon"><a ><img alt="Icon_game_card" src="images/Zeev.jpg"></a></div>
+                    <div class="details">
+                    <a class="link-title"></a>
+                    <p><a >Have a game card? Cant Redeem it here.</a></p>
+                    </div><!--.details-->
+                    <div class="clear"></div>
+                </div><!--.link-->
+                <div class="clear"></div>
+            </div><!--#features-links-->
+            <ul id="sitemap">
+                <li><a onclick='loadPage("http:\/\/www.animaljam.com/about_us")'>about us</a></li>
+                <li>|</li>
+                <li><a onclick='loadPage("http:\/\/www.animaljam.com/contact")'>contact us</a></li>
+                <li>|</li>
+                <li><a onclick='loadPage("http:\/\/www.animaljam.com/rules")' class="footer-italic">rules</a></li>
+                <li>|</li>
+                <li><a onclick='loadPage("http:\/\/www.animaljam.com/privacy")' class="footer-italic">privacy</a></li>
+                <li>|</li>
+                <li><a onclick='loadPage("http:\/\/www.animaljam.com/terms_and_conditions")'>terms</a></li>
+            </ul>
+            <div id="footer-new">
+                <a onclick='loadPage("http:\/\/www.nationalgeographic.com/")' class="nat-geo-logo"><img alt="Nat_geo_logo_new" src="images/NatGeo.png"></a>
+                <a class="play-wild-logo"><img alt="Play_wild_logo" src="images/PlayWild.png"></a>
+                <p id="copyright">© 2010 National Geographic Games and Smart Bomb Interactive, Inc. All rights reserved.</p>
+                <p id="trademarks">"National Geographic," the Yellow Border Design, and "National Geographic Kids with the elasticized Yellow Border Design" are registered trademarks of National Geographic, used with permission.</p>
+            </div>
+
+        </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

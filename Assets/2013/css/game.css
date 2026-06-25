@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-weight: normal;
+    font-style: inherit;
+    font-family: inherit;
+    vertical-align: bottom;
+}
+
+body {
+    background: #40430A;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    text-align: center;
+}
+#main-container {
+    width: 1186px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+}
+#global-navigation-bar {
+    width: 1058px;
+    height: 67px;
+    background: url(../images/GamePage/TopBar.png) no-repeat;
+    position: relative;
+    left: 26px;
+    z-index: 5;
+}
+#global-navigation-bar #logo {
+    width: 203px;
+    height: 37px;
+    position: absolute;
+    top: -9px;
+    left: 200px;
+    background: url(../images/Logo.png) no-repeat;
+    background-position: 0 -37px;
+}
+#global-navigation-bar #navigation {
+    position: absolute;
+    top: 12px;
+    left: 696px;
+    font-size: 12px;
+}
+#global-navigation-bar li a:hover {
+    cursor:pointer;
+}
+ul, ol, dir, menu {
+    list-style-type: none;
+}
+#navigation li {
+    float: left;
+    margin-right: 18px;
+}
+#navigation a:link {
+}
+
+#navigation a {
+    font-weight: bold;
+    color: #fde12c;
+    text-decoration: none;
+}
+#navigation a.logout {
+    color: #f68423;
+}
+a {
+}
+a {
+    text-decoration: none;
+}
+#global-navigation-bar #user-display {
+    position: absolute;
+    top: 12px;
+    left: 830px;
+    color: #fff;
+    font-weight: bold;
+}
+h1, h2, h3, h4, h5, h6, pre, code, p, a, table, code, kbd, samp, pre, tt, var, blockquote, q, abbr, acronym, form, select, isindex, listing, xmp, plaintext, address, sup, sub, caption, del, strong, span, textarea, input {
+    font-size: 1em;
+}
+#global-navigation-bar #logo {
+    width: 203px;
+    height: 37px;
+    position: absolute;
+    top: -9px;
+    left: 200px;
+    background: url(../images/GamePage/NatGeo.png) no-repeat;
+    background-position: 0 -37px;
+}
+
+#global-navigation-bar #logo:hover {
+    background-position: 0 5px
+}
+
+#global-navigation-bar #logo img {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+#game-embed-navigation-bar {
+    width: 1055px;
+    height: 73px;
+    background: url(../images/game_embed_navigation_bar.png) no-repeat;
+    position: relative;
+    z-index: 2;
+    left: 53px
+}
+
+#game-embed-navigation-bar #navigation {
+    position: absolute;
+    top: 9px;
+    left: 248px;
+    font-size: 12px
+}
+
+#game-embed-navigation-bar #secondary-navigation {
+    position: absolute;
+    top: 9px;
+    right: 211px;
+    font-size: 12px
+}
+
+#game-embed-navigation-bar #secondary-navigation a {
+    color: #fff;
+    font-weight: bold
+}
+
+#game-embed-navigation-bar #secondary-navigation li {
+    float: left;
+    margin-right: 18px
+}
+
+#game-embed-navigation-bar #user-display {
+    position: absolute;
+    top: 7px;
+    right: 130px;
+    color: #FDE12C;
+    font-weight: bold
+}
+
+#game-embed-border {
+    width: 965px;
+    height: 665px;
+    /* border-image: url(../images/GamePage/PlayBox.png)
+              30 10
+              fill stretch;
+    border-style: solid;
+    border-width: 0px; */
+    background: url(../images/GamePage/PlayBox.png) no-repeat;
+    position: relative;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+    background-size: 100% 100%;
+}
+
+#game-embed-border #logo {
+    width: 210px;
+    height: 133px;
+    background: url(../images/Logo2.png) no-repeat;
+    position: absolute;
+    bottom: -45px;
+    left: -5px
+}
+
+#game-embed-border #btn-join-the-club {
+    width: 205px;
+    height: 42px;
+    display: block;
+    background: url(../images/join_the_club_sprite.png) 240 fill stretch;
+    position: absolute;
+    bottom: 29px;
+    left: 400px
+}
+
+#game-embed-border #btn-join-the-club:hover {
+    background-position: 0 -46px
+}
+
+
+#game-embed-border #embed {
+    position: absolute;
+    left: 3.42%;
+    top: 3.06%;
+    width: 93.66%;
+    background-color: black;
+    height: 83.31%;
+}
+
+
+#game-embed-border #embed .no-flash-link {
+    margin-left: 371px;
+    margin-top: 250px;
+    width: 158px;
+    height: 39px;
+    display: block;
+}
+
+#game-embed-border #btn-feedback-link {
+    bottom: 43px;
+    color: #BA6B26;
+    font-size: 12px;
+    left: 240px;
+    position: absolute;
+    text-decoration: underline
+}
+
+#game-embed-border #btn-help-link {
+    bottom: 43px;
+    color: #BA6B26;
+    font-size: 12px;
+    right: 225px;
+    position: absolute;
+    text-decoration: underline
+}
+
+#game-embed-border .btn-close {
+    width: 27px;
+    height: 27px;
+    background: url(../images/btn_close.png) no-repeat 0 0;
+    position: absolute;
+    top: 0;
+    right: 3px
+}
+
+#game-embed-border .btn-close:hover {
+    background-position: 0 -30px
+}
+
+#game-embed-border #game-logout {
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 876px;
+    width: 78px;
+    height: 18px;
+    background: url(../images/game_logout_sprite.png) no-repeat
+}
+
+#game-embed-border #game-logout:hover {
+    background-position: 0px -20px
+}
+
+#footer {
+    margin-top: 20px
+}
+
+#footer #copyright {
+    height: 70px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #b1b16c;
+    line-height: 27px;
+    vertical-align: middle;
+    font-size: 11px
+}
+
+#footer #copyright a {
+    color: #b1b16c
+}
+
+#footer #copyright a:hover {
+    color: #FFFFFF;
+}
+
+#footer #copyright p {
+    height: 35px
+}
+
+.copyright-text {
+    line-height: normal;
+}
+
+#footer #copyright img {
+    height: 27px
+}
+
+#footer #sitemap {
+    width: 775px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #565732;
+    font-size: 12px
+}
+
+#footer #sitemap a:link, #footer #sitemap a:visited, #footer #sitemap a:active {
+    color: #b1b16c;
+    font-weight: bold
+}
+
+#footer #sitemap a:hover {
+    color: #fff
+}
+
+#footer #sitemap li {
+    display: inline;
+    padding: 0 5px
+}
+
+#game-embed-border .nat-geo-kids-logo {
+    width: 178px;
+    height: 99px;
+    background: url(../images/NatKid.png) no-repeat;
+    position: absolute;
+    bottom: -58px;
+    right: -11px
+}
+#game-embed-border.theater-mode {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  left: 50%;
+  background-image: none;
+  /* top: 50%; */
+  z-index: 9999;
+}
+
+#game-embed-border.theater-mode::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: -1;
+}
+#game-embed-border.theater-mode #embed {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+#game-embed-border.theater-mode .nat-geo-kids-logo {
+    display: none;
+}
+
+#game-embed-border.theater-mode #logo {
+    display: none;
+}
+#game-embed-border.theater-mode #packet-log-btn {
+    display: none;
+}
+
+
+
+
+.theater-mode-toggle {
+    display: block;
+    position: absolute;
+    background-image: url(../images/GamePage/TheaterMode.png);
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    width: 65px;
+    height: 60px;
+    bottom: 35px;
+    right: 25px;
+}
+
+.theater-mode-toggle:hover {
+    cursor: pointer;
+    bottom: 36px;
+    transform: scale(1.1);
+    animation: 1.5s forwards infinite;
+    animation-name: choppy-scale;
+}
+
+@keyframes choppy-scale {
+    0%{
+        
+        transform: scale(1.1);
+    }
+    49%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(1.0);
+    }
+    100%{
+        transform: scale(1.0);
+    }
+}
+
+
+.theater-mode .theater-mode-toggle {
+    bottom: 10px;
+    right: -20px;
+    opacity: 0.3;
+    transition: opacity 0.5s ease, right 0.5s ease;
+    
+}
+.theater-mode .theater-mode-toggle:hover {
+    opacity: 1;
+    bottom: 10px;
+    right: 5px;
+}
+
+#packet-log-btn{
+    display: block;
+    position: absolute;
+    background-image: url(../images/GamePage/LogButton.png);
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    width: 50px;
+    height: 45px;
+    bottom: 40px;
+    right: 105px;
+}
+
+#packet-log-btn:hover{
+    animation: 1.5s forwards infinite;
+    /* bottom: 45px; */
+    animation-name: choppy-wave;
+}
+@keyframes choppy-wave {
+    0%{
+        
+        transform: rotate(-10deg);
+    }
+    49%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}

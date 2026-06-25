@@ -1,0 +1,42 @@
+{
+  "name": "ajdr",
+  "version": "0.0.9",
+  "description": "Animal Jam Done Right",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [
+    "animal",
+    "jam"
+  ],
+  "author": "Thatoneham&Wildworks",
+  "license": "ISC",
+  "dependencies": {
+    "@electron/rebuild": "^3.7.2",
+    "chokidar": "^3.6.0",
+    "source-map-support": "^0.5.16"
+  },
+  "devDependencies": {
+    "electron": "^11.5.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "asar": true,
+    "files": [
+      "**/*",
+      "!proxy/**",
+      "!pepPlugin/**"
+    ],
+    "extraResources": [
+      {
+        "from": "pepPlugin",
+        "to": "pepPlugin"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  }
+}

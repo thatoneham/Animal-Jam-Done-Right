@@ -1,0 +1,106 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>Game Client</title>
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+    <embed id="flash-content" allowscriptaccess="always" wmode="window" style="width: 100vw; height: 100vh;">
+    <script>
+      
+      "use strict";
+
+      const flashContent = document.getElementById("flash-content");
+      flashContent.setAttribute("allowScriptAccess", "always");
+      flashContent.setAttribute("wmode", "window");
+      flashContent.style.width = "100vw"
+      flashContent.style.height = "100vh"
+
+      window.ipc.on("flashVarsReady", (event, flashVars) => {
+        const flashVarsParams = Object.entries(flashVars)
+          .map(([key, val]) => `${encodeURIComponent(key)}=${encodeURIComponent(val)}`)
+          .join("&");
+
+        flashContent.setAttribute("FlashVars", flashVarsParams);
+        flashContent.src = flashVars.clientURL;
+
+        flashContent.style.display = "block";
+      });
+
+      window.ipc.on("removed", () => document.body.innerHTML = "");
+
+      // pass resize events to flash client
+      window.addEventListener("resize", resize);
+
+      // External interface functions
+      // NOTE: complete_signup is hard coded in the flash client
+      function complete_signup(username, password) {
+        window.ipc.sendToHost("signupCompleted", {username, password});
+      }
+
+      function aj_initialized() {
+        window.ipc.sendToHost("initialized");
+        // HACK: there's a race condition happening, so just retry resize a bunch of times
+        //   and hope it takes
+        for (let i = 0; i < 50; i++) {
+          setTimeout(() => resize(), i * 500);
+        }
+      }
+
+      function ajPrint(imageData) {
+        window.ipc.sendToHost("printImage", imageData);
+      }
+
+      function reloadSwfOrGetIP(reloadSwf, params) {
+        window.ipc.sendToHost("reloadGame", reloadSwf, params);
+      }
+
+      // TODO: fix this
+      function resize() {
+        const flashContent = document.getElementById("flash-content");
+        if (flashContent && flashContent.handleResize) {
+          try {
+            flashContent.handleResize(window.innerWidth, window.innerHeight);
+          }
+          catch (err) {
+            // Swallow error
+          }
+        }
+      }
+
+      window.addEventListener("error", err => {
+        window.ipc.sendToHost("reportError", err.stack || err.error.stack);
+      });
+      window.addEventListener("unhandledrejection", event => {
+        window.ipc.sendToHost("reportError", err.stack || err.error.stack);
+      });
+
+      window.addEventListener("beforeunload", event => {
+        const flashContent = document.getElementById("flash-content");
+        if (flashContent && typeof flashContent.unloadAJClient === "function") {
+          try {
+            flashContent.unloadAJClient();
+          }
+          catch (err) {
+            // Swallow error
+          }
+        };
+        delete event["returnValue"];
+      });
+
+      // document.addEventListener("DOMContentLoaded",()=>{
+      //   if ('serviceWorker' in navigator) {
+      //     navigator.serviceWorker.register('/sw.js',{ scope: '/' })
+      //       .then(() => console.log('SW registered'))
+      //       .catch(err => console.error('SW failed', err));
+      //   } else {
+      //     console.log("no service worker :(")
+      //   }
+      // })
+    </script>
+  
+
+</body></html>

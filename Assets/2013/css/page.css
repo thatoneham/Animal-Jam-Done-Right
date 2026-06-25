@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: CCDigitalDeliveryBold;
+    src: url(../fonts/CCDigitalDeliveryBold.ttf);
+}
+
+#go-back{
+    position: absolute;
+    top: 20px;
+    left: -40px;
+    opacity: 0.8;
+    background-image: url(../images/GoBack.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-family: CCDigitalDeliveryBold;
+    text-align: center;
+    line-height: 75px;
+    padding-left: 60px;
+    color: #346d1a;
+    font-size: 25px;
+    width: 150px;
+    height: 75px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+#go-back:hover{
+    background-image: url(../images/GoBackHovered.svg);
+    color: #479323;
+    left: 10px;
+    opacity: 1;
+}
+
+#page-view{
+    width: 100%;
+    height: 100%;
+}

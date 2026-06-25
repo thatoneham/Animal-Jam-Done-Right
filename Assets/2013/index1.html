@@ -1,0 +1,173 @@
+<html class="full-height">
+<head>
+    <title>Animal Jam Done Right</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body id="site-content" class="full-height">
+
+    <div id="blackout" style="display: none;"></div>
+
+    <div id="frame-top"></div>
+    <div id="frame">
+        <div id="frame-left" style="height: 1119px;"></div>
+        <div id="frame-right" style="height: 1119px;"></div>
+    </div>
+    <div id="main-container">
+        <div id="header-new">
+            <h1 class="aj-logo">
+                <a><img src="images/Logo.png"/></a>
+            </h1>
+            <img alt="Nat_geo_kids_logo_new" id="nat-geo-kids-new" src="images/NatKid.png">
+            <div id="user-status">&nbsp;</div>
+            <div id="user-bar">
+                <div class="left"></div>
+                <div class="body" id="sessionText"> Parents <a href="">don't login</a> here!
+                </div>
+                <div class="right"></div>
+            </div>
+            <div id="global-navigation-bar-new">
+                <ul id="global-navigation-new">
+                <li><a onclick='makeErrorMessage("your already there goofy")' id="nav-link-home"></a></li>
+                <li><a onclick='shell.openExternal("https:\/\/www.animaljam.com/en/join")' id="nav-link-membership"></a></li>
+                <li><a onclick='loadPage("http:\/\/www.animaljam.com/parents")' id="nav-link-parents"></a></li>
+                <li><a onclick='loadPage("http:\/\/www.animaljam.com/help")' id="nav-link-help"></a></li>
+                <li><a onclick='makeErrorMessage("Your already on the game")' id="nav-link-play"></a></li>
+                </ul>
+            </div>
+            <div id="error-content">
+                <div id="error-title">
+                    oops! an error has occured
+                </div>
+                <div id="error-text">
+                    i love monkeys
+                </div>
+            </div>
+            <div class="home-content" id="player-login">
+                <div class="home-content-head"></div>
+
+                <div class="home-content-body">
+                    
+                    <div class="content" >
+                        
+                        <div class="logged-out">
+                            <h3></h3>
+                            <div id="loginform" method="post">
+                                <div class="player-login">
+                                    <input autocomplete="off" value="" id="signin_user_screen_name" name="signin_user[screen_name]" placeholder="username" size="25" tabindex="1" type="text" a="">
+                                </div>
+                                <div class="player-login">
+                                    <input autocomplete="off" value="" id="signin_user_password" name="signin_user[password]" placeholder="password" size="25" tabindex="2" type="password">
+
+                                    <input autocomplete="off" id="signin_user_password-shim" placeholder="password" size="25" tabindex="2" type="text" value="password" data-password-shim="data-password-shim" style="display: none;">
+                                </div>  
+                                <button id="submit-play" name="commit" tabindex="5" type="submit" value=""></button>
+                                <div class="clear"></div>
+                                <div class="remember-me">
+                                    <input name="signin_user[remember_me]" type="hidden" value="0"><input id="signin_user_remember_me" name="signin_user[remember_me]" tabindex="4" type="checkbox" value="1">
+                                    <span>keep me logged in</span>
+                                </div>
+                                <p>
+                                    <a href="#" onclick="$('forgot-pass-container').toggle();; return false;">Forgot your password?</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="home-content-foot"></div>
+            </div>
+        </div>
+        <div id="flash-content" tabindex="-1">
+            <embed src="group.swf" height="100%" width="100%" wmode="transparent">
+        </div>
+        <div class="darken" id="otp-darken"></div>
+        <div id="otp-menu">
+        
+            <div id="otp-title">
+                Input your 2FA code that was sent to your email.
+            </div>
+            <input id="otp-input" type="text" value=""/>
+            <button id="otp-button" type="submit"></button>
+        </div>
+        <!-- <div id="middle" tabindex="-1"> for no flash support
+            <img class="animal" src="images/Animals/Bunny.png"/>
+            <img class="animal" src="images/Animals/Panda.png"/>
+            <img class="animal" src="images/Animals/Koala.png"/>
+            <img class="animal" src="images/Animals/Lion.png"/>
+
+            <div id="login-content">
+                <img id="login-pole" src="images/LoginPole.png"/> 
+                <div id="login-background" onclick='window.location.href="game.html";'>
+                    <div id="play-text">
+                        <div class="play-original"></div>
+                        <div class="play-hover"></div>
+                    </div>
+                    <div id="now-text">
+                        <div class="now-original"></div>
+                        <div class="now-hover"></div>
+                    </div>
+                    <div id="login-clip">
+                        <div id="glow-line"></div>
+                    </div>
+                    <img id="login-free-text" src="images/PlayNow/FreeText.svg"/>
+                    <div id="froggie"></div> 
+                </div>
+            </div>
+
+            <img class="animal" src="images/Animals/Monkey.png"/>
+            <img class="animal" src="images/Animals/Wolf.png"/>
+        </div> -->
+    </div>
+    <div id="frame-foot">
+        <div id="frame-foot-content">
+            <div id="features-links">
+                <div class="link no-margin" id="feature-parents">
+                    <div class="icon"><a onclick='loadPage("http:\/\/www.animaljam.com/parents")'><img alt="Icon_security" src="images/Security.jpg"></a></div>
+                    <div class="details">
+                    <a onclick='loadPage("http:\/\/www.animaljam.com/parents")' class="link-title"></a>
+                    <p><a onclick='loadPage("http:\/\/www.animaljam.com/parents")'>Learn why Animal Jam is both safe and fun!</a></p>
+                    </div><!--.details-->
+                    <div class="clear"></div>
+                </div><!--.link-->
+                <div class="link" id="feature-membership">
+                    <div class="icon"><a onclick='shell.openExternal("http:\/\/www.animaljam.com/membership")'><img alt="Icon_paw" src="images/Paw.jpg"></a></div>
+                    <div class="details">
+                    <a onclick='shell.openExternal("http:\/\/www.animaljam.com/membership")' class="link-title"></a>
+                    <p><a onclick='shell.openExternal("http:\/\/www.animaljam.com/membership")'>See what you get, when you join the club.</a></p>
+                    </div><!--.details-->
+                    <div class="clear"></div>
+                </div><!--.link-->
+                <div class="link" id="feature-game-card">
+                    <div class="icon"><a ><img alt="Icon_game_card" src="images/Zeev.jpg"></a></div>
+                    <div class="details">
+                    <a class="link-title"></a>
+                    <p><a >Have a game card? Cant Redeem it here.</a></p>
+                    </div><!--.details-->
+                    <div class="clear"></div>
+                </div><!--.link-->
+                <div class="clear"></div>
+            </div><!--#features-links-->
+            <ul id="sitemap">
+                <li><a onclick='loadPage("http:\/\/www.animaljam.com/about_us")'>about us</a></li>
+                <li>|</li>
+                <li><a onclick='loadPage("http:\/\/www.animaljam.com/contact")'>contact us</a></li>
+                <li>|</li>
+                <li><a onclick='loadPage("http:\/\/www.animaljam.com/rules")' class="footer-italic">rules</a></li>
+                <li>|</li>
+                <li><a onclick='loadPage("http:\/\/www.animaljam.com/privacy")' class="footer-italic">privacy</a></li>
+                <li>|</li>
+                <li><a onclick='loadPage("http:\/\/www.animaljam.com/terms_and_conditions")'>terms</a></li>
+            </ul>
+            <div id="footer-new">
+                <a onclick='loadPage("http:\/\/www.nationalgeographic.com/")' class="nat-geo-logo"><img alt="Nat_geo_logo_new" src="images/NatGeo.png"></a>
+                <a class="play-wild-logo"><img alt="Play_wild_logo" src="images/PlayWild.png"></a>
+                <p id="copyright">© 2010 National Geographic Games and Smart Bomb Interactive, Inc. All rights reserved.</p>
+                <p id="trademarks">"National Geographic," the Yellow Border Design, and "National Geographic Kids with the elasticized Yellow Border Design" are registered trademarks of National Geographic, used with permission.</p>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
