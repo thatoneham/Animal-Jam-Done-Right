@@ -1,6 +1,6 @@
 {
   "name": "ajdr",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "Animal Jam Done Right",
   "main": "index.js",
   "scripts": {
