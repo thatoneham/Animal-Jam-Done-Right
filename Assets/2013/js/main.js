@@ -189,6 +189,26 @@ function loadPage(url){
   window.electronAPI.loadPage("pageViewer.html",url);
 }
 
+function openRegister(){
+  console.log("need to open register!")
+  getFlashVars(gotFlashVarsToRegister)
+}
+
+async function getFlashVars(callback){
+  var res = await fetch(this.env.flashVarsPath)
+  var json = await res.json()
+  callback(json)
+}
+
+
+function gotFlashVarsToRegister(res){
+  console.log("got flash vars! ", res)
+  var vars = res
+  vars.webRefPath =  "create_account"
+  window.electronAPI.loadPage("game.html",vars);
+}
+
+
 // LISTENERS
 
 loginBtn.addEventListener('click',async (e) => {

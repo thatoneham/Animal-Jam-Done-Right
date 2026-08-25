@@ -143,7 +143,8 @@ async function startProxyAndpatchFlashVars(vars){
 
 async function initializeClient(vars) {
   flashVars = await startProxyAndpatchFlashVars(vars);
-  usernameHolder.innerText = "Hi " + flashVars.screen_name
+  
+  usernameHolder.innerText = flashVars.webRefPath == "create_account" ? ("Welcome to animal jam!") : ("Hi " + flashVars.screen_name)
 
   await createWebView()
   //flashVarsReady(flashVars)

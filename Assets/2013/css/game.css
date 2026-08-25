@@ -13,9 +13,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 80%;
     text-align: center;
+    overflow-x: hidden;
 }
 #main-container {
-    width: 1186px;
+    /* width: 1186px; */
     margin: 0 auto;
     text-align: left;
     position: relative;
@@ -25,7 +26,8 @@ body {
     height: 67px;
     background: url(../images/GamePage/TopBar.png) no-repeat;
     position: relative;
-    left: 26px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 5;
 }
 #global-navigation-bar #logo {
@@ -141,8 +143,11 @@ h1, h2, h3, h4, h5, h6, pre, code, p, a, table, code, kbd, samp, pre, tt, var, b
 }
 
 #game-embed-border {
-    width: 965px;
-    height: 665px;
+    /* aspect-ratio: 965/665; */
+    width: 75%;
+    height: 0;
+    padding-bottom: 51.683925%;
+    position: relative;
     /* border-image: url(../images/GamePage/PlayBox.png)
               30 10
               fill stretch;
@@ -156,6 +161,12 @@ h1, h2, h3, h4, h5, h6, pre, code, p, a, table, code, kbd, samp, pre, tt, var, b
     margin-bottom: 50px;
     background-size: 100% 100%;
 }
+/* #game-embed-border > * {
+    position: absolute;
+    inset: 0;
+} */
+
+
 
 #game-embed-border #logo {
     width: 210px;
@@ -314,6 +325,7 @@ h1, h2, h3, h4, h5, h6, pre, code, p, a, table, code, kbd, samp, pre, tt, var, b
   inset: 0;
   width: 100vw;
   height: 100vh;
+  padding-bottom:0%;
   left: 50%;
   background-image: none;
   /* top: 50%; */
@@ -332,6 +344,7 @@ h1, h2, h3, h4, h5, h6, pre, code, p, a, table, code, kbd, samp, pre, tt, var, b
   height: 100%;
   top: 0;
   left: 0;
+  padding-bottom: 0;
   position: fixed;
 }
 
@@ -355,15 +368,15 @@ h1, h2, h3, h4, h5, h6, pre, code, p, a, table, code, kbd, samp, pre, tt, var, b
     background-image: url(../images/GamePage/TheaterMode.png);
     background-size: 100% 100%;
     background-position: 50% 50%;
-    width: 65px;
-    height: 60px;
-    bottom: 35px;
-    right: 25px;
+    width: 6%;
+    height: 8%;
+    bottom: 6%;
+    right: 2.5%;
 }
 
 .theater-mode-toggle:hover {
     cursor: pointer;
-    bottom: 36px;
+    bottom: 6.5%;
     transform: scale(1.1);
     animation: 1.5s forwards infinite;
     animation-name: choppy-scale;
@@ -387,6 +400,8 @@ h1, h2, h3, h4, h5, h6, pre, code, p, a, table, code, kbd, samp, pre, tt, var, b
 
 
 .theater-mode .theater-mode-toggle {
+    width: 65px;
+    height: 60px;   
     bottom: 10px;
     right: -20px;
     opacity: 0.3;
@@ -405,10 +420,10 @@ h1, h2, h3, h4, h5, h6, pre, code, p, a, table, code, kbd, samp, pre, tt, var, b
     background-image: url(../images/GamePage/LogButton.png);
     background-size: 100% 100%;
     background-position: 50% 50%;
-    width: 50px;
-    height: 45px;
-    bottom: 40px;
-    right: 105px;
+    width: 5%;
+    height: 6.5%;
+    bottom: 6.5%;
+    right: 9%;
 }
 
 #packet-log-btn:hover{
